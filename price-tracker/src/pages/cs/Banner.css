@@ -1,0 +1,51 @@
+/* Banner container common styles */
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow the container */
+}
+
+/* Overlay applied to both banners */
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1; /* Ensure it overlays the background but stays behind the text */
+}
+
+/* Heading text above the overlay */
+.banner h2 {
+  position: relative;
+  z-index: 2; /* Ensure the text appears above the overlay */
+}
+
+/* Specific banner background for Gold */
+.gold-banner {
+  background-image: url('https://risingnepaldaily.com/storage/media/47271/Untitled-1.jpg');
+  background-color: #FFD700;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Specific banner background for Silver */
+.silver-banner {
+  background-image: url('https://arynews.tv/wp-content/uploads/2024/08/Silver-1-1.jpg');
+  background-color: #C0C0C0;
+  background-size: cover;
+  background-position: center;
+}
