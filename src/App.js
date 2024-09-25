@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Gold from './pages/Gold';
+
+import Home from './pages/Home';
 import Silver from './pages/Silver';
 
 function App() {
@@ -11,6 +13,7 @@ function App() {
         <Navbar />
         <div style={{ flex: 1, padding: '20px' }}>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/gold" element={<Gold />} />
             <Route path="/silver" element={<Silver />} />
           </Routes>
