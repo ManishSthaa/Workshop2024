@@ -5,11 +5,20 @@ import './cs/Home.css'; // Import CSS for styling
 const Home = () => {
   return (
     <div className="home-container">
+      
+
+       {/* Fullscreen video background */}
+       <video autoPlay loop muted playsInline className="video-background">
+        <source src="/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Content on top of the video */}
+      <div className="content">
       <div className="hero-section">
         <h1>Welcome to the Gold and Silver Exchange</h1>
         <p>Your one-stop platform for tracking live prices of Gold and Silver.</p>
       </div>
-
       <div className="info-section">
         <div className="metal-info">
           <h2>About Gold</h2>
@@ -29,6 +38,9 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </div>
+
+      
   );
 };
 
